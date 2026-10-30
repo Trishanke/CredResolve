@@ -1,0 +1,18 @@
+# Source dataset (synthetic assignment input; keep outside version control)
+/collections_30k_dataset (1)/
+/collections_30k_dataset (1).zip
+
+# Generated row-level staging and golden exports
+/output/
+
+# Python/Jupyter artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/

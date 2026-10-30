@@ -1,0 +1,12 @@
+issue,evidence,impact,treatment
+Coverage,"Payment and targeting tables span Jan 1-Aug 8, 2026",Limits trend to 7 complete months; August partial,Keep Aug visibly partial; do not annualize
+Missingness,455 accounts lack borrower_id; 382 payments lack payment_reference; phones/emails and other fields missing,Can break borrower-level joins and payment deduplication,Preserve null; only coalesce a missing reference within same payment_id when all other facts agree
+Exact duplicates,"Borrowers, calls, payments and WhatsApp contain exact duplicate rows",Inflates event counts/amount if summed,Remove exact copies; retain quarantined raw copies
+Payment ID conflicts,Repeated payment_id sometimes differs only by blank vs populated reference,Could double-count events,Coalesce only the non-null reference when all other payment facts agree; quarantine any other conflict
+Payment reference reuse,Reference is reused across payment IDs/accounts/amounts,Reference alone is not a valid dedupe key,Do not deduplicate globally by reference
+Agent identity,"30,000 agent rows map to 1,000 agent_ids","Agent snapshots/history, not one row per agent",Use latest updated_at only for current descriptive snapshot; avoid historical staffing attribution
+Borrower identity,"30,600 rows map to repeated borrower_ids",Snapshot histories and inconsistent IDs complicate joins,Latest updated_at as current snapshot; retain unmatched IDs and flag
+Timezone,"UTC, Kolkata, Dubai, and timestamps without offsets coexist",Can shift day/hour attribution,No conversion in staging; retain source timezone and defer local-time analysis
+Disposition codes,legacy/v1/v2 with codes including PTP and PROMISE_TO_PAY,No authoritative code map; RPC semantics unclear,Do not assert RPC/contact rate from disposition alone
+Denominator,No historical eligible population/account status snapshot,Account recovery rate may have an unstable denominator,"Report cash and file-account payer penetration as a proxy, not recovery rate"
+Causality/ROI,"No intervention date, costs, channel price, agent wage, or holdout",Cannot estimate incremental ROI reliably,Run randomized targeting test and collect full cost data

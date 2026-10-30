@@ -1,0 +1,21 @@
+strategy_version,channel,target_rows,distinct_accounts,associated_account_lifetime_success_amount,interpretation
+legacy,FIELD,2267,2167,104755918.38,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+legacy,MIXED,2262,2188,97668105.92,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+legacy,SMS,3470,3280,146403076.22,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+legacy,VOICE,1887,1832,80475764.05,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+legacy,WHATSAPP,4019,3761,181533687.01,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v1,FIELD,1543,1508,69079548.43,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v1,MIXED,1985,1923,88115627.15,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v1,SMS,1509,1475,67943704.13,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v1,VOICE,1442,1413,62219854.21,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v1,WHATSAPP,2631,2520,116203314.14,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v2,FIELD,1847,1779,85041839.77,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v2,MIXED,2275,2186,103429992.26,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v2,SMS,2610,2496,106149401.28,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v2,VOICE,1568,1528,70616778.99,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v2,WHATSAPP,1818,1773,80933101.34,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v3,FIELD,1124,1111,51196586.09,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v3,MIXED,2226,2147,95424237.84,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v3,SMS,2964,2821,128101484.71,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v3,VOICE,2598,2492,112956143.03,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.
+v3,WHATSAPP,2955,2828,124807304.42,Association only: payments may predate or follow exposure; accounts can be targeted repeatedly.

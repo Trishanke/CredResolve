@@ -1,0 +1,23 @@
+flowchart LR
+  S[Source systems
+  collections CSVs] --> R[Raw immutable
+  versioned files + manifests]
+  R --> ST[Staging
+  schema checks, trim, null normalization]
+  ST --> Q[Quarantine + DQ ledger
+  exact dupes, invalids, conflicts]
+  ST --> C[Clean canonical tables
+  typed columns, source lineage]
+  C --> G[Golden entities + facts
+  account, payment, account-month]
+  G --> F[Features
+  cohorts, channel exposure, agent tenure]
+  F --> M[Metric layer
+  versioned definitions + denominators]
+  M --> D[Executive dashboard / memo]
+  ST -. late events / schema drift .-> MON[Monitoring + alerts]
+  C -. referential, null, duplicate checks .-> MON
+  G -. reconciliation + freshness .-> MON
+  MON --> BF[Backfill by event date
+  idempotent partitions]
+  BF --> C

@@ -1,0 +1,29 @@
+{
+  "payment_rows_raw": 25500,
+  "payment_rows_after_exact_dedupe": 25014,
+  "payment_id_canonical_rows": 25000,
+  "payment_id_duplicate_groups_pre_canonical": 14,
+  "payment_id_rows_coalesced": 14,
+  "payment_unresolved_rows": 0,
+  "distinct_payment_references_reused": 3407,
+  "reused_references_with_multiple_accounts": 3407,
+  "reused_references_with_multiple_amounts": 3407,
+  "successful_amount_total": 1315583964.6399999,
+  "successful_event_count": 17534,
+  "successful_paying_accounts_total": 13284,
+  "ptp_kept_rate_among_kept_or_broken": 0.4964609599646096,
+  "ptp_kept_count": 4489,
+  "ptp_broken_count": 4553,
+  "account_count": 30000,
+  "borrower_id_missing_in_accounts": 455,
+  "observation_start": "2026-01-01 00:14:40",
+  "observation_end": "2026-08-08 23:50:23",
+  "assumption_amount_currency": "INR inferred from assignment context; no currency column is provided",
+  "limitations": [
+    "August 2026 is partial (events observed only through Aug 8).",
+    "No historical eligible-account denominator or as-of account status is available; payer penetration is only against the file account set.",
+    "No payment reversal linkage is supplied; SUCCESS is gross booked amount, not independently reconciled net cash.",
+    "No currency or cost data exists.",
+    "No authoritative timezone per event, RPC disposition map, targeting intervention timestamp, or stable treatment/control design exists."
+  ]
+}
